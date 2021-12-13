@@ -1,4 +1,8 @@
-# EnjoyTelevision
+# EnjoyTelevision ---> Projet de type 'allociné'
+# Projet réalisé en full stack avec Angular
+# Pour tester l'application, se connecter en utilisant les infos suivantes : 
+# id = Administrateur
+# mdp = azerty
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 

@@ -1,0 +1,64 @@
+<app-header></app-header>
+
+<div class="container text-center">
+
+  <div *ngIf="msg" class="text-center text-success m-1">{{msg}}</div>
+
+  <form [formGroup]="dramaForm" (ngSubmit)="onSubmitDramaForm()">
+
+    <div class="form-group">
+      <label for="dramaName">Nom de la Série</label>
+      <input type="text"
+             id="dramaName"
+             class="form-control"
+             formControlName="dramaName">
+    </div>
+
+    <div class="form-group">
+      <label for="dateRelease">Date de Sortie initiale de la Série</label>
+      <input type="text"
+             id="dateRelease"
+             class="form-control"
+             formControlName="dateRelease">
+    </div>
+
+    <div class="form-group">
+      <label for="numberSeasons">Nombre de saisons de la Série</label>
+      <input type="text"
+             id="numberSeasons"
+             class="form-control"
+             formControlName="numberSeasons">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text"
+             id="description"
+             class="form-control"
+             formControlName="description">
+    </div>
+
+    <div class="form-group">
+        <label for="critical">Critique</label>
+        <input type="text"
+               id="critical"
+               class="form-control"
+               formControlName="critical">
+      </div>
+
+      <div class="form-group">
+        <label for="picture">Ajouter l'Url d'une photo ! </label>
+        <input type="text"
+               id="picture"
+               class="form-control"
+               formControlName="picture">
+      </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="dramaForm.invalid">Mettre à jour</button>
+
+    <br>
+
+    <a routerLink="/dramas" class="card-link">Retour vers la liste des Séries</a>
+  </form>
+
+</div>

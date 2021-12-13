@@ -1,0 +1,23 @@
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Date</th>
+      <th scope="col">Auteur</th>
+      <th scope="col">Commentaire</th>
+      <th scope="col">Action</th>
+      
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr app-row-comments
+        *ngFor="let comment of comments"
+        [idDrama]="idDrama"
+        [id]="comment.id"
+        [date]="comment.date"
+        [author]="comment.author"
+        [content]="comment.content">
+    </tr>
+    </tbody>
+  </table>

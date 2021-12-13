@@ -1,0 +1,27 @@
+<td scope="row"> {{ id }} </td>
+<td> {{ name }} </td>
+<td> {{ releaseDate }} </td>
+<td>
+    <a class="text-white" [routerLink]="detailsUrl">
+        <button class="m-2 btn btn-info ">
+          Détails
+        </button>
+      </a>
+
+    <a class="text-white" [routerLink]="editUrl">
+        <button class="m-2 btn btn-warning ">
+          Editer
+        </button>
+      </a>
+
+      <button type="button"
+            class="btn btn-danger"
+            (click)="onDeleteDrama()">Supprimer
+    </button>
+
+    <a class="text-white" [routerLink]="commentsUrl">
+        <button class="m-2 btn btn-info ">
+          Commentaires
+        </button>
+      </a>
+</td>

@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div class="container text-center">
+
+  <div class="imageDrama"><img src="{{drama.picture}}" /></div>
+  <div class="card mx-auto" style="width: 18rem;">
+    
+         <div class="card-body">
+          <h2>{{drama.name}}</h2> 
+         <h5 class="card-title">Date de Sortie initiale: {{ drama.releaseDate }}</h5>
+         <h5 class="card-title">Nombre de saisons: {{ drama.numberSeasons }}</h5>
+         <h6 class="card-title">Synopsis : <br><br>{{ drama.description }}</h6><br>
+         <p class="card-subtitle mb-2 text-muted">Critique : <br><br>{{ drama.critical }}</p>
+         <a routerLink="/dramas" class="card-link">Retour vers la liste des Séries</a>
+       </div>
+
+  </div>
+
+</div>

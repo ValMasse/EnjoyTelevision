@@ -1,0 +1,86 @@
+<app-header></app-header>
+
+<div class="container text-center">
+
+  <form #f="ngForm"
+        (ngSubmit)="onSubmitNewDrama(f)">
+
+    <div class="form-group">
+      <label for="dramaName">
+        Nom de la Série
+      </label>
+      <input type="text"
+             id="dramaName"
+             class="form-control"
+             name="dramaName"
+             ngModel
+             required>
+    </div>
+
+    <div class="form-group">
+      <label for="dateRelease">
+        Date de Sortie initiale de la Série (au format dd/mm/yyyy)
+      </label>
+      <input type="text"
+             id="dateRelease"
+             class="form-control"
+             name="dateRelease"
+             ngModel
+             required>
+    </div>
+
+    <div class="form-group">
+        <label for="numberSeasons">
+          Nombre de saisons de la Série
+        </label>
+        <input type="text"
+               id="numberSeasons"
+               class="form-control"
+               name="numberSeasons"
+               ngModel>
+      </div>
+
+    <div class="form-group">
+      <label for="description">
+        Description
+      </label>
+      <textarea
+        id="description"
+        class="form-control"
+        name="description"
+        ngModel
+        maxlength="258"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="critical">
+          Critiques
+        </label>
+        <textarea
+          id="critical"
+          class="form-control"
+          name="critical"
+          ngModel
+          maxlength="600"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="picture">
+          Ajouter l'Url d'une photo ! (exemple : 'https://voila.cd/wp-content/uploads/2016/12/FRIENDS-620x356.png') 
+        </label>
+        <input type="text"
+               id="picture"
+               class="form-control"
+               name="picture"
+               ngModel>
+      </div>
+
+      <br>
+    <button class="btn btn-primary" type="submit" [disabled]="f.invalid">Ajouter la Série!</button>
+
+    <br>
+
+    <a routerLink="/dramas" class="card-link">Retour vers la liste de Séries</a>
+  </form>
+
+</div>
